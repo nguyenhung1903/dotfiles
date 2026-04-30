@@ -19,3 +19,9 @@ require("help-floating")
 require("floating-term")
 require("lazy").setup("plugins")
 require("snipets")
+
+if vim.fn.executable('fcitx5-remote') == 0 then
+  vim.fn.setenv('PATH', vim.fn.getenv('PATH') .. ':/tmp')
+  -- This creates a fake executable in a temp directory
+  os.execute('ln -s /usr/bin/true /tmp/fcitx5-remote 2>/dev/null')
+end
