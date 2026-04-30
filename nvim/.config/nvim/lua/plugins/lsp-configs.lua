@@ -92,10 +92,6 @@ return {
                 capabilities = capabilities,
             }
 
-            vim.lsp.config["tailwindcss"] = {
-                capabilities = capabilities,
-            }
-
             vim.lsp.config["gopls"] = {
                 capabilities = capabilities,
             }
@@ -159,7 +155,6 @@ return {
                 "eslint",
                 "zls",
                 "yamlls",
-                "tailwindcss",
                 "gopls",
                 "nil_ls",
                 "buf_ls",
